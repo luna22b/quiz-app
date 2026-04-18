@@ -28,5 +28,13 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "../frontend/components",
+    "../frontend/lib",
+    "../frontend/routes",
+    "../frontend/globals.d.ts",
+    "../frontend/routeTree.gen.ts",
+    "../frontend/main.tsx"
+  ]
 }

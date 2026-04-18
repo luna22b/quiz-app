@@ -7,7 +7,7 @@ import appCss from "../styles/app.css?url";
 
 function RootComponent() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
+    <div className="min-h-screen text-gray-900">
       <Outlet />
       <TanStackRouterDevtools />
     </div>

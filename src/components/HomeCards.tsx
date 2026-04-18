@@ -3,7 +3,7 @@ type CardProps = {
 };
 
 const Card = ({ label }: CardProps) => (
-  <div className="flex flex-col gap-20 items-center justify-center outline-1 w-[90vw] mx-auto h-75 rounded-xl">
+  <div className="flex flex-col gap-20 items-center justify-center outline-1 w-[90vw] mx-auto h-75 rounded-xl outline-white text-white">
     {label}
   </div>
 );

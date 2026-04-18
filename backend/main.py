@@ -1,7 +1,15 @@
 from fastapi import FastAPI
-from auth import auth_router
+from contextlib import asynccontextmanager
+from app.utils.init_db import create_tables
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # initialize db at start
+    create_tables()
+    yield
+    
+app = FastAPI(lifespan=lifespan)
 
-app.include_router(auth_router)
-
+@app.get("/health")
+def health_check():
+    return {"status": "Running..."}

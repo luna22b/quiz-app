@@ -33,7 +33,7 @@ function Signup() {
       email: email,
     };
 
-    // send user data to the backend
+    // sends user data to the backend
     axios
       .post("http://localhost:5713/signup", data)
       .then((response) => {
