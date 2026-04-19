@@ -35,7 +35,7 @@ function Signup() {
 
     // sends user data to the backend
     axios
-      .post("http://localhost:5713/signup", data)
+      .post("http://localhost:8000/signup", data)
       .then((response) => {
         console.log(response);
       })

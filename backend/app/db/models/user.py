@@ -2,9 +2,8 @@ from app.core.database import Base
 from sqlalchemy import Column, Integer, String
 
 class User(Base): 
-    __tablename__ = "Users"
+    __tablename__ = "users"
     id = Column(Integer, primary_key = True)
-    first_name = Column(String(50))
-    last_name = Column(String(100))
-    email = Column(String(70), unique=True)
-    password = Column(String(250))
+    username = Column(String(50), unique=True, index=True, nullable=False)
+    email = Column(String(70), unique=True, nullable=False)
+    password = Column(String(250), nullable=False)

@@ -7,24 +7,24 @@ export const Route = createFileRoute("/login")({
 });
 
 function Login() {
-  const [email, setEmail] = useState<string>("");
+  const [identifier, setIdentifier] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log({ email, password });
+    console.log({ identifier, password });
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          value={identifier}
+          onChange={(e) => setIdentifier(e.target.value)}
           className="bg-amber-100"
-          placeholder="email"
+          placeholder="email or username"
           required
         />
 
