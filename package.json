@@ -17,6 +17,7 @@
     "@tanstack/react-router": "^1.139.3",
     "@tanstack/react-router-devtools": "^1.139.3",
     "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebaseui": "^6.1.0",
